@@ -4,11 +4,13 @@ require_once("config.php");
 $idcategoria = $_POST["idcategoria"];
 $nombre = $_POST["nombre"];
 $descripcion=$_POST["descripcion"];
+$marcas=$_POST["marcas"];
 
 $rs = $cn->query(
     "UPDATE categoria 
     SET nombre='$nombre' ,
-    descripcion='$descripcion' 
+    descripcion='$descripcion' ,
+    marcas = '$marcas'
     WHERE idcategoria= $idcategoria");
 $cn->close();
 
