@@ -6,4 +6,4 @@ COPY . /var/www/html
 
 EXPOSE $PORT
 
-RUN echo "ServerName" $RAILWAY_STATIC_URL >> /etc/apache2/apache2.conf
+RUN echo "ServerName" $RAILWAY_STATIC_URL:$PORT >> /etc/apache2/apache2.conf
